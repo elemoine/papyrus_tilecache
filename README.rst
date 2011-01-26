@@ -4,6 +4,10 @@ papyrus_tilecache
 papyrus_tilecache provides an easy and convenient method for embeding
 TileCache in Pyramid applications.
 
+The source code of papyrus_tilecache is straightforward, so if
+papyrus_tilecache doesn't do what you want, open its source code, get
+inspiration, and write your own code.
+
 Install
 -------
 
