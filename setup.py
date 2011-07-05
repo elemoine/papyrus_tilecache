@@ -6,7 +6,19 @@ here = os.path.abspath(os.path.dirname(__file__))
 README = open(os.path.join(here, 'README.rst')).read()
 CHANGES = open(os.path.join(here, 'CHANGES.rst')).read()
 
-requires = ['pyramid', 'WebError', 'TileCache']
+install_requires = [
+    'pyramid',
+    'WebError',
+    'TileCache'
+    ]
+
+setup_requires = [
+    'nose'
+    ]
+
+tests_require = install_requires + [
+    'coverage'
+    ]
 
 setup(name='papyrus_tilecache',
       version='0.1',
@@ -25,9 +37,10 @@ setup(name='papyrus_tilecache',
       packages=find_packages(),
       include_package_data=True,
       zip_safe=False,
-      install_requires=requires,
-      tests_require=requires,
-      test_suite="papyrus_tilecache",
+      install_requires=install_requires,
+      setup_requires=setup_requires,
+      tests_require=tests_require,
+      test_suite="papyrus_tilecache.tests",
       entry_points = """\
       [paste.app_factory]
       main = papyrus_tilecache:main
