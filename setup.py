@@ -21,7 +21,7 @@ tests_require = install_requires + [
     ]
 
 setup(name='papyrus_tilecache',
-      version='0.1',
+      version='0.2',
       description='papyrus_tilecache',
       long_description=README + '\n\n' +  CHANGES,
       classifiers=[
